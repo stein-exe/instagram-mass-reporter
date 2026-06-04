@@ -10,24 +10,15 @@ A paid tool for users who need to triage abusive or fraudulent content at scale.
 
 ---
 
-<p align="center">
-  <img src="https://i.pinimg.com/736x/d9/12/4e/d9124e0ba3e7179a1833da49dec5546e.jpg" alt="cover" />
-</p>
-
----
-
 ## Stats
 
 <p>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=stein-exe.instagram-mass-reporter&left_text=Visitors" alt="Visitors" />
   <img src="https://img.shields.io/github/stars/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Stars" />
   <img src="https://img.shields.io/github/forks/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Forks" />
-  <img src="https://img.shields.io/github/watchers/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Watchers" />
-  <img src="https://img.shields.io/github/issues/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Issues" />
-  <img src="https://img.shields.io/github/last-commit/stein-exe/instagram-mass-reporter?style=for-the-badge" alt="Last commit" />
+  <img src="https://img.shields.io/github/subscribers/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Watchers" />
   <img src="https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20Termux%20%7C%20Pydroid-lightgrey?style=for-the-badge" alt="Platform" />
   <img src="https://img.shields.io/badge/Telegram-@rejerk-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
-  <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-red?style=for-the-badge" alt="Made with love" />
 </p>
 <p>
   <img src="https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" alt="Python" />
@@ -37,6 +28,12 @@ A paid tool for users who need to triage abusive or fraudulent content at scale.
   <img src="https://img.shields.io/badge/rich-FFC107?style=flat-square" alt="Rich" />
   <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram" />
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" />
+</p>
+
+---
+
+<p align="center">
+  <img src="https://i.pinimg.com/736x/d9/12/4e/d9124e0ba3e7179a1833da49dec5546e.jpg" alt="cover" />
 </p>
 
 ---
