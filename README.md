@@ -16,7 +16,6 @@ A paid tool for users who need to triage abusive or fraudulent content at scale.
   <img src="https://visitor-badge.laobi.icu/badge?page_id=stein-exe.instagram-mass-reporter&left_text=Visitors" alt="Visitors" />
   <img src="https://img.shields.io/github/stars/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Stars" />
   <img src="https://img.shields.io/github/forks/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Forks" />
-  <img src="https://img.shields.io/github/subscribers/stein-exe/instagram-mass-reporter?style=for-the-badge&logo=github&logoColor=white" alt="Watchers" />
   <img src="https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Telegram-@rejerk-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
 </p>
