@@ -22,7 +22,6 @@ A paid tool for users who need to triage abusive or fraudulent content at scale.
 <p>
   <img src="https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" alt="Python" />
   <img src="https://img.shields.io/badge/flask-%23000.svg?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
-  <img src="https://img.shields.io/badge/fastapi-005571?style=flat-square&logo=fastapi" alt="FastAPI" />
   <img src="https://img.shields.io/badge/requests-3670A0?style=flat-square&logo=python&logoColor=white" alt="Requests" />
   <img src="https://img.shields.io/badge/rich-FFC107?style=flat-square" alt="Rich" />
   <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram" />
@@ -41,29 +40,28 @@ A paid tool for users who need to triage abusive or fraudulent content at scale.
 
 - Automates submission of Instagram reports against a target account, with a configurable reason and loop count.
 - Web UI with a built-in help tab that documents every option, every report reason, and every config knob — open it once and you don't need the README for usage.
-- Two backends, picked automatically based on the host:
-  - **Flask** for Android environments (Termux, Pydroid)
-  - **FastAPI** for desktop environments (Windows, Linux)
-- Self-installs its pip dependencies on first run. You don't install Flask, FastAPI, or anything else by hand.
+- Single Flask backend. Works the same on every supported platform.
+- Self-installs its pip dependencies on first run. You don't install Flask or anything else by hand.
 
 ---
 
 ## Supported platforms
 
-| Platform | Backend | Notes |
-| --- | --- | --- |
-| Termux (Android) | Flask | Auto-detected via `PREFIX` containing `com.termux` |
-| Pydroid (Android) | Flask | Auto-detected via `PYDROID_PYTHON` or `HOME` containing `pydroid` |
-| Windows | FastAPI | |
-| Linux (desktop) | FastAPI | |
+- Windows
+- Linux
+- macOS
+- Termux (Android)
+- Pydroid (Android)
 
-The loader inspects your environment on startup and downloads the matching backend from the `flask/` or `fastapi/` directory in this repo. No flag to choose — just run it.
+Same Flask backend, same behavior on every platform. No flags, no environment detection — just run it.
+
+> **Python version is enforced.** The loader only runs on Python 3.11, 3.12, or 3.13. On any other version it prints `Not allowed. Only python version 3.11 12 13 are allowed` and exits before doing anything.
 
 ---
 
 ## Requirements
 
-- **Python 3.11, 3.12, or 3.13.** Other versions are not currently published in the repo and will fail to download.
+- **Python 3.11, 3.12, or 3.13.** Other versions are rejected by the loader — it prints `Not allowed. Only python version 3.11 12 13 are allowed` and exits.
 - **Instagram accounts** — at least one, with valid session credentials (session ID, or username + password). You provide these in the web UI; nothing is hardcoded.
 - **Proxies** — optional but strongly recommended for any non-trivial volume.
 - **An active subscription.** Contact [@rejerk](https://t.me/rejerk) to get one. You will not be able to run reports without a valid key.
@@ -83,9 +81,9 @@ python main.py
 
 That's the whole install. On first run:
 
-1. The loader checks your environment (Termux / Pydroid / desktop).
-2. It installs missing pip packages automatically (`flask` or `fastapi` + `uvicorn` + shared deps, depending on platform).
-3. It downloads the matching backend script from this repo and caches it in `files/`.
+1. The loader verifies your Python version is 3.11, 3.12, or 3.13.
+2. It installs missing pip packages automatically (`flask`, `requests`, `rich`, `httpx`, `python-cfonts`).
+3. It downloads the Flask backend script from this repo and caches it in `files/`.
 4. It opens the web UI in your default browser.
 
 Subsequent runs reuse the cached backend for 12 hours before re-checking upstream.
@@ -130,15 +128,13 @@ Everything is configured through the web UI — there is no config file to edit 
 instagram-mass-reporter/
 ├── main.py              # the loader — run this
 ├── files/               # cached backend + cache timestamp
-│   ├── 3.13_fastapi.py  # or 3.13_android.py, depending on platform
+│   ├── 3.13_flask.py    # one per supported Python version
 │   └── lastupdate.txt
-├── flask/               # Flask backend (Android)
-│   └── 3.11.py, 3.12.py, 3.13.py
-└── fastapi/             # FastAPI backend (desktop)
+└── flask/               # Flask backend
     └── 3.11.py, 3.12.py, 3.13.py
 ```
 
-You never edit the files in `flask/` or `fastapi/`. They're the deployed backends and are pulled by the loader.
+You never edit the files in `flask/`. They're the deployed backend and are pulled by the loader.
 
 ---
 
